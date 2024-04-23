@@ -1,0 +1,15 @@
+<div>
+    <h2>Personal Details</h2>
+    <div *ngIf="patientPersonalDetails; else loading">
+      <p><strong>Name:</strong> {{ patientPersonalDetails.name }}</p>
+      <p><strong>Age:</strong> {{ patientPersonalDetails.age }}</p>
+      <p><strong>Gender:</strong> {{ patientPersonalDetails.gender }}</p>
+      <p><strong>Contact Number:</strong> {{ patientPersonalDetails.contactNumber }}</p>
+      <p><strong>Email:</strong> {{ patientPersonalDetails.email }}</p>
+      <p><strong>Address:</strong> {{ patientPersonalDetails.address }}</p>
+    </div>
+    <ng-template #loading>
+      <p>Loading personal details...</p>
+    </ng-template>
+  </div>
+  

@@ -1,0 +1,16 @@
+<div>
+    <h2>Prescribed Medicines for Today</h2>
+    <div *ngIf="medicines.length > 0; else noMedicines">
+      <ul>
+        <li *ngFor="let medicine of medicines">
+          <p><strong>Medicine Name:</strong> {{ medicine.name }}</p>
+          <p><strong>Dosage:</strong> {{ medicine.dosage }}</p>
+          <p><strong>Frequency:</strong> {{ medicine.frequency }}</p>
+        </li>
+      </ul>
+    </div>
+    <ng-template #noMedicines>
+      <p>No medicines prescribed for today.</p>
+    </ng-template>
+  </div>
+  

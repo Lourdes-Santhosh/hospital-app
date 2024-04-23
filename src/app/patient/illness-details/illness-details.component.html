@@ -1,0 +1,13 @@
+<div>
+    <h2>Illness Details</h2>
+    <div *ngIf="patientIllness; else loading">
+      <p><strong>Illness Name:</strong> {{ patientIllness.name }}</p>
+      <p><strong>Symptoms:</strong> {{ patientIllness.symptoms }}</p>
+      <p><strong>Diagnosis:</strong> {{ patientIllness.diagnosis }}</p>
+      <p><strong>Treatment:</strong> {{ patientIllness.treatment }}</p>
+    </div>
+    <ng-template #loading>
+      <p>Loading illness details...</p>
+    </ng-template>
+  </div>
+  

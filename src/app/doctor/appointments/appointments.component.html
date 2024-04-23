@@ -1,0 +1,16 @@
+<div>
+    <h2>Appointments for Today</h2>
+    <div *ngIf="appointments.length > 0; else noAppointments">
+      <ul>
+        <li *ngFor="let appointment of appointments">
+          <p><strong>Patient Name:</strong> {{ appointment.patientName }}</p>
+          <p><strong>Time:</strong> {{ appointment.time }}</p>
+          <p><strong>Reason:</strong> {{ appointment.reason }}</p>
+        </li>
+      </ul>
+    </div>
+    <ng-template #noAppointments>
+      <p>No appointments for today.</p>
+    </ng-template>
+  </div>
+  

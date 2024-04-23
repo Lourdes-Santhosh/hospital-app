@@ -1,0 +1,18 @@
+<div>
+    <h2>Treatment History</h2>
+    <div *ngIf="treatmentHistory.length > 0; else noHistory">
+      <ul>
+        <li *ngFor="let treatment of treatmentHistory">
+          <p><strong>Date:</strong> {{ treatment.date | date }}</p>
+          <p><strong>Doctor:</strong> {{ treatment.doctor }}</p>
+          <p><strong>Illness:</strong> {{ treatment.illness }}</p>
+          <p><strong>Medication:</strong> {{ treatment.medication }}</p>
+          <p><strong>Notes:</strong> {{ treatment.notes }}</p>
+        </li>
+      </ul>
+    </div>
+    <ng-template #noHistory>
+      <p>No treatment history available.</p>
+    </ng-template>
+  </div>
+  
